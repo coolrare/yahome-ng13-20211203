@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'yahome-ng-practice';
+  title = 'conduit';
+  subTitle = 'A place to share your <u>knowledge</u>.'
 }
