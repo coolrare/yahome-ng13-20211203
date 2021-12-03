@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   keyword = 'test';
+  isHighlight = false;
+  fontSize = 24;
 
   constructor() { }
 
@@ -16,6 +19,8 @@ export class HeaderComponent implements OnInit {
   search(event: MouseEvent) {
     console.log(event);
     this.keyword += '!';
+    this.isHighlight = !this.isHighlight;
+    this.fontSize += 2;
   }
 
 }
