@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,6 +9,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { TagsComponent } from './tags/tags.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { FilterArticlePipe } from './filter-article.pipe';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     ArticlesComponent,
     TagsComponent,
-    FooterComponent
+    FooterComponent,
+    FilterArticlePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

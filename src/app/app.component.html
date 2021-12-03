@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header (keywordSearch)="searchArticle($event)"></app-header>
 
 <div class="home-page">
 
@@ -13,7 +13,7 @@
     <div class="row">
 
       <div class="col-md-9">
-        <app-articles></app-articles>
+        <app-articles [list]="(articles$ | async) || [] | filterArticle:keyword"></app-articles>
       </div>
 
       <div class="col-md-3">
